@@ -2,16 +2,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title> hl from me</title>
+<title> DANCE BOOK</title>
 <style>
 
 .header {
-
     background-color: rgb(127, 255, 249);
-    height: 10vh;
+    height:     10vh;
     text-align: center;
-    width: 92%;
-    margin: auto;
+    width:      92%;
+    margin:     auto;
 }
 
 .header  h1 {
@@ -22,26 +21,28 @@
     text-align: center;
 }
 
+/* ****   NAV BAR  ***** */
+
 .navbar {
     background-color: rgb(87, 84, 84);
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
     color: aliceblue;
-    width:89%;
+    width:88vw;
     margin: auto;
     height: 10vh;
     position:fixed;
-    left: 64px;
+    left: 4vw;
     top: 0px;
 }
 
 .navbar h1 { display: inline;
-            margin-top: 6px;
-            padding-left: 3em;
-        }
+    margin-top: 6px;
+    padding-left: 3em;
+}
 
 .navbar ul {
-   display:inline; 
+    display:inline; 
     margin-top:  12px; 
     padding-top: 12px;
    /* outline: 3px solid red; */
@@ -63,76 +64,65 @@
     text-decoration: none;
 }
 
+/**********   MARQUEE    ********************/
 
 .pic {
     height: 400px;
-   /* background-image: url('C:\Users\Reggie\Documents\WebDev\WebDance\Images\danceLegs.webp'); */
-   /* background-image: url('C:/Users/Reggie/Documents/WebDev/WebDance/Images/danceLegs.webp'); */
     background-image: url('./Images/danceLegs.webp') ;
     background-size: cover;
     margin: auto;
-   /* margin-bottom: 24px; */
+    /* margin-bottom: 24px; */
     width: 92%;
 }
 
+ 
 
 
-.box-fri {
-    outline: 4PX RED SOLID;;
-    background-color:rgb(149, 160, 95);
-    width: 92%;
-    margin:  auto;
-    height: 400px;
-    margin-bottom: 64px;
-}
+/********************************************/
+/****************  BODY  ********************/
+/********************************************/
 
-.txt-fri {
-    float: left;
-    width: 45%;
-    height: 20vh;
-    background-color: rgb(42, 38, 38);
-    color: white;
-    outline: 3px red solid;
-    margin-top: 22px;
-    padding: 12px 24px;
-    margin-left: 34px;
-}
 
-.txt-fri  h1 {
+h1 {
     font-size: 24px;
     margin-top: 0px ;
-    padding-top: 12px;
-    border: 3px black solid;
+    /* border: 3px black solid; */
     text-align: center;
 }
 
-.img-fri {
-    float: right;
-    width: 32%;
-    height: 20vh;
-    margin-top: 0px;
-    margin-right: 1em;
-    background-image: url('./Images/dance-couple_640x420.webp');
-    background-size: cover;
+ul {
+    margin:1.2em auto;
+    text-decoration: none;
+    border: 3px solid darkgray;
+    padding: 1.2em;
 }
 
-.box {
-    background-color: rgb(81, 176, 200);
-    border: 4px red solid ;
+li {
+    text-decoration: none;
+    width: 85%;
 }
 
-.container{
+
+.pli {
+    margin: auto;
+    width: 80%;
+   /* border: 3px solid darkgray; */
+}
+
+.container {
     background-color: rgb(110, 117, 110);
-
-
     width: 92%;
     display: grid;
     grid-template-columns: repeat( 3, 1fr );
-    grid-template-rows: 64px  340px  340px;
+    grid-template-rows: 64px  340px  340px 340px;
     gap: 22px;
     margin: auto;
 }
 
+
+/******************************************/
+/****************  HEADER  ****************/
+/******************************************/
 .grd-header {
     grid-column: 1/-1;
     background-color: rgb(169, 123, 212);
@@ -144,26 +134,25 @@
     margin-left: 64px;
 }
 
-.pli {
-    margin: auto;
-    width: 80%;
-    border: 2px solid gray;
-}
+
+
+/******************************************/
+/****************   FRI  ******************/
+/******************************************/
 .grd-txt-fri {
     grid-column: 1/3;
     background-color: rgb(100, 144, 70);
-    color: white;
+    color:  white;
     padding: 22px 48px;
     /*height: 28vh;
     margin-top: 22px;
     margin-left: 34px; */
 }
-
-.grd-txt-fri  h1 {
-    font-size: 24px;
-    margin-top: 0px ;
-    /* border: 3px black solid; */
-    text-align: center;
+ 
+.grd-txt-fri  li:nth-child(odd) {
+    background-color: darkgreen;
+    text-decoration: none;
+    width: 85%;
 }
 
 .grd-img-fri {
@@ -175,53 +164,80 @@
     background-size: cover;
 }
 
-/*          SAT           */
 
+/*****************************************/
+/********************  SAT  **************/
+/*****************************************/
 .cal-sat {
     background-color: rgb(230, 188, 72);
     border: 3px red solid;
    /* margin-top: 24px; */   
 }
-    
+
+
 .grd-txt-sat {
     grid-column: 2 / -1 ;
     background-color: rgb(49, 128, 162);
     color: white;
     padding: 22px 48px;
-    border: 2px solid darkgreen;
+  /*   border: 2px solid darkgreen; */
 }
-
-.grd-txt-sat h1 {
-    font-size: 24px;
-    margin-top: 0px ;
-    /* border: 3px black solid; */
-    text-align: center;
+ 
+.grd-txt-sat  li:nth-child(odd) {
+    background-color: darkblue;
+    text-decoration: none;
+    width: 85%;
 }
 
 .grd-img-sat {
-    
-   /* width: 32%;
-    height: 20vh;
-    margin-top: 22px;
-    margin-right: 1em; */
-  /*  outline: 3px blueviolet solid; */
+    /* outline: 3px blueviolet solid; */
     background-image: url('./Images/dance-woman-legs-active-600x420.webp');
     background-size: cover;
 }
 
 
-.grd-txt-fri  li:nth-child(even) {
-    background-color: rgb(215, 97, 24);
+/******************************************/
+/****************  Sun ******************/
+/******************************************/
+.grd-txt-sun {
+    grid-column: 1/3;
+    background-color: rgb(100, 144, 70);
+    color:  white;
+    padding: 22px 48px;
+}
+ 
+.grd-txt-sun  li:nth-child(odd) {
+    background-color: darksalmon;
     text-decoration: none;
-    width: 65%;
+    width: 85%;
+}
+
+.grd-img-sun {
+    background-image: url('./Images/hot-salsa-full-length-young-600w-1190203360.webp');
+    background-size: cover;
+}
+
+
+
+
+@media (max-width: 700px)
+{
+    .container {
+        display:block;
+    }
 }
 
 </style>
-
 </head>
 
+/******************************************/
+/**********  START OF BODY  ***************/
+/******************************************/
 <body>
+
 <!-- <div class="header"> <h1> Dance Book</h1></div>  -->
+
+
 <nav class="navbar"> DANCE BOOK
     <ul>
         <li> <a href="#sun">Sunday  </a></li>
@@ -231,50 +247,54 @@
     </ul>
 </nav>
 
+
 <div class="pic">hello</div>
-
-
 
 
 <div class="container">
 
     <div class="grd-header"> <h1> Upcoming Events </h1>  </div>
     
+
     <div  class="grd-txt-fri">
-        <a name="fri">FRI</a>
+        <a name="fri"></a>
         <h1> Friday</h1>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-         Aspernatur, dignissimos! Magni rerum quis ipsa exercitationem culpa veniam dignissimos nobis repellat? 
-         Aut, voluptatem quia! Accusamus temporibus quidem cum earum minus dolor! 
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ullam
-        hic culpa perferendis illo vitae sunt aperiam doloremque, magnam modi ipsam voluptate laudantium aut, voluptatem, accusamus  
-        dolores dolor  Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi enim repellat quibusdam alias culpa aspernatur! Expedita
-         sapiente minima animi id perferendis corporis vero similique tenetur, possimus commodi, aut vitae corrupti.
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ullam
-        hic culpa perferendis illo vitae sunt aperiam doloremque, magnam modi ipsam voluptate laudantium aut, voluptatem, accusamus nulla consequuntur
+        <div class="pli">
+            <ul>
+               <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
+               <li> Swing Dance, Cambridge MA, 8:00-10:00, Lesson 7:30</li>
+               <li> Ballrom Dance - Super Shag, Waltham MA, 8:00-10:00, Lesson 8:00</li>
+               <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
+               <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
+            </ul>
+           </div>
     </div>
+
     <div  class="grd-img-fri">   </div>
  
 
 
 
-    <div  class="grd-img-sat"> 1  </div>
+    <div  class="grd-img-sat">   </div>
     
     <div  class="grd-txt-sat">
         <a name="sat"> </a> 
         <h1> Saturday</h1>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-         Aspernatur, dignissimos! Magni rerum quis ipsa exercitationem culpa veniam dignissimos nobis repellat? 
-         Aut, voluptatem quia! Accusamus temporibus quidem cum earum minus dolor! 
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ullam
-        hic culpa perferendis illo vitae sunt aperiam doloremque, magnam modi ipsam voluptate laudantium aut, voluptatem, accusamus nulla consequuntur
-        dolores dolor  Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi enim repellat quibusdam alias culpa aspernatur! Expedita
-         sapiente minima animi id perferendis corporis vero similique tenetur, possimus commodi, aut vitae corrupti.
-         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ullam
-        hic culpa perferendis illo vitae sunt aperiam doloremque, magnam modi ipsam voluptate laudantium aut, voluptatem, accusamus nulla consequuntur 
+        <div class="pli">
+            <ul>
+               <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
+               <li> Swing Dance, Cambridge MA, 8:00-10:00, Lesson 7:30</li>
+               <li> Ballrom Dance - Super Shag, Waltham MA, 8:00-10:00, Lesson 8:00</li>
+               <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
+               <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
+            </ul>
+        </div>
     </div>
 
-    <div  class="grd-txt-fri"; style="background-color: coral" >
+
+
+
+    <div  class="grd-txt-sun"; style="background-color: coral" >
         <a name="sun"> </a>
         <h1> Sunday</h1>
         <div class="pli">
@@ -286,10 +306,15 @@
             <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
          </ul>
         </div>
-        
     </div>
-    <div  class="grd-img-fri"> 1  </div>
+
+    <div  class="grd-img-sun">   </div>
+
+
+
+    }
  
+
 
 </body>
 </html>
