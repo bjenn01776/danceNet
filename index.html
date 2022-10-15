@@ -21,8 +21,9 @@
     text-align: center;
 }
 
-/* ****   NAV BAR  ***** */
-
+/*************************/
+/******   NAV BAR  *******/
+/*************************/
 .navbar {
     background-color: rgb(87, 84, 84);
     font-size: 36px;
@@ -45,6 +46,7 @@
     display:inline; 
     margin-top:  12px; 
     padding-top: 12px;
+    border: none;
    /* outline: 3px solid red; */
 }
 
@@ -63,9 +65,9 @@
     color: white;
     text-decoration: none;
 }
-
-/**********   MARQUEE    ********************/
-
+/************************************/
+/**********   MARQUEE  **************/
+/************************************/
 .pic {
     height: 400px;
     background-image: url('./Images/danceLegs.webp') ;
@@ -75,13 +77,11 @@
     width: 92%;
 }
 
- 
 
 
 /********************************************/
 /****************  BODY  ********************/
 /********************************************/
-
 
 h1 {
     font-size: 24px;
@@ -109,13 +109,17 @@ li {
    /* border: 3px solid darkgray; */
 }
 
+
+
+
 .container {
     background-color: rgb(110, 117, 110);
     width: 92%;
     display: grid;
     grid-template-columns: repeat( 3, 1fr );
     grid-template-rows: 64px  340px  340px 340px;
-    gap: 22px;
+    grid-column-gap: 22px;
+    grid-row-gap: 12px;
     margin: auto;
 }
 
@@ -126,6 +130,7 @@ li {
 .grd-header {
     grid-column: 1/-1;
     background-color: rgb(169, 123, 212);
+
 }
 .grd-header  h1 {
     font-size: 30px;
@@ -133,7 +138,6 @@ li {
     margin-top: 10px;
     margin-left: 64px;
 }
-
 
 
 /******************************************/
@@ -144,22 +148,14 @@ li {
     background-color: rgb(100, 144, 70);
     color:  white;
     padding: 22px 48px;
-    /*height: 28vh;
-    margin-top: 22px;
-    margin-left: 34px; */
 }
  
 .grd-txt-fri  li:nth-child(odd) {
     background-color: darkgreen;
     text-decoration: none;
-    width: 85%;
 }
 
 .grd-img-fri {
-   /* width: 32%;
-    height: 20vh;
-    margin-top: 22px;
-    margin-right: 1em; */
     background-image: url('./Images/dance-couple_640x420.webp');
     background-size: cover;
 }
@@ -170,17 +166,14 @@ li {
 /*****************************************/
 .cal-sat {
     background-color: rgb(230, 188, 72);
-    border: 3px red solid;
-   /* margin-top: 24px; */   
+    border: 3px red solid;  
 }
-
 
 .grd-txt-sat {
     grid-column: 2 / -1 ;
     background-color: rgb(49, 128, 162);
     color: white;
     padding: 22px 48px;
-  /*   border: 2px solid darkgreen; */
 }
  
 .grd-txt-sat  li:nth-child(odd) {
@@ -190,7 +183,6 @@ li {
 }
 
 .grd-img-sat {
-    /* outline: 3px blueviolet solid; */
     background-image: url('./Images/dance-woman-legs-active-600x420.webp');
     background-size: cover;
 }
@@ -209,7 +201,6 @@ li {
 .grd-txt-sun  li:nth-child(odd) {
     background-color: darksalmon;
     text-decoration: none;
-    width: 85%;
 }
 
 .grd-img-sun {
@@ -220,11 +211,35 @@ li {
 
 
 
-@media (max-width: 700px)
+@media (max-width: 500px)
 {
     .container {
-        display:block;
+       /* display:block; */
+        grid-template-columns: 1fr;
+        grid-template-rows:    1fr;
     }
+
+    .grd-txt-fri {
+    grid-template-columns: 1fr;
+    background-color: rgb(100, 144, 70);
+    color:  white;
+    padding: 22px 48px;
+}
+    
+.grd-img-fri {
+    background-image: url('./Images/dance-couple_640x420.webp');
+    background-size: cover;
+    grid-template-columns: 1fr;
+}
+
+   
+.grd-img-sat {
+    background-image: url('./Images/dance-woman-legs-active-600x420.webp');
+    background-size: cover;
+    grid-template-columns: 1fr;
+}
+
+     
 }
 
 </style>
@@ -259,7 +274,7 @@ li {
     <div  class="grd-txt-fri">
         <a name="fri"></a>
         <h1> Friday</h1>
-        <div class="pli">
+       
             <ul>
                <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
                <li> Swing Dance, Cambridge MA, 8:00-10:00, Lesson 7:30</li>
@@ -267,7 +282,7 @@ li {
                <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
                <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
             </ul>
-           </div>
+           
     </div>
 
     <div  class="grd-img-fri">   </div>
@@ -280,7 +295,7 @@ li {
     <div  class="grd-txt-sat">
         <a name="sat"> </a> 
         <h1> Saturday</h1>
-        <div class="pli">
+        
             <ul>
                <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
                <li> Swing Dance, Cambridge MA, 8:00-10:00, Lesson 7:30</li>
@@ -288,16 +303,16 @@ li {
                <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
                <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
             </ul>
-        </div>
+         
     </div>
 
 
 
 
-    <div  class="grd-txt-sun"; style="background-color: coral" >
+    <div  class="grd-txt-fri"; style="background-color: coral" >
         <a name="sun"> </a>
         <h1> Sunday</h1>
-        <div class="pli">
+        
          <ul>
             <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
             <li> Swing Dance, Cambridge MA, 8:00-10:00, Lesson 7:30</li>
@@ -305,7 +320,7 @@ li {
             <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
             <li> Karen's Ballrom Dance, Wakefield MA, 8:00-10:00, Lesson 7:30</li>
          </ul>
-        </div>
+    
     </div>
 
     <div  class="grd-img-sun">   </div>
