@@ -20,8 +20,8 @@
   /*  border: 3px black solid; */
     text-align: center;
 }
-  
-/*********  ****************/
+
+/*************************/
 /******   NAV BAR  *******/
 /*************************/
 .navbar {
@@ -29,11 +29,13 @@
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
     color: aliceblue;
-    width:88vw;
+    width: 92%;
     margin: auto;
     height: 10vh;
     position:fixed;
-    left: 4vw;
+    right:0;
+    left: 0;
+   /*  left: 4vw; */
     top: 0px;
 }
 
@@ -86,8 +88,7 @@
 h1 {
     font-size: 24px;
     margin-top: 0px ;
-    /* border: 3px black solid; */
-    text-align: center;
+    /* border: 3px black solid; */ 
 }
 
 ul {
@@ -101,16 +102,7 @@ li {
     text-decoration: none;
     width: 85%;
 }
-
-
-.pli {
-    margin: auto;
-    width: 80%;
-   /* border: 3px solid darkgray; */
-}
-
-
-
+ 
 
 .container {
     background-color: rgb(110, 117, 110);
@@ -118,8 +110,16 @@ li {
     display: grid;
     grid-template-columns: repeat( 3, 1fr );
     grid-template-rows: 64px  340px  340px 340px;
+
+    grid-template-areas:
+            " HAED   HAED   HAED"
+            " FRI    FRI    IMGF"
+            " IMGS   SAT    SAT"
+            " SUN    SUN    IMGN" ;
+
     grid-column-gap: 22px;
     grid-row-gap: 12px;
+
     margin: auto;
 }
 
@@ -128,7 +128,7 @@ li {
 /****************  HEADER  ****************/
 /******************************************/
 .grd-header {
-    grid-column: 1/-1;
+    grid-area: HAED;
     background-color: rgb(169, 123, 212);
 
 }
@@ -144,7 +144,7 @@ li {
 /****************   FRI  ******************/
 /******************************************/
 .grd-txt-fri {
-    grid-column: 1/3;
+    grid-area: FRI;
     background-color: rgb(100, 144, 70);
     color:  white;
     padding: 22px 48px;
@@ -156,6 +156,7 @@ li {
 }
 
 .grd-img-fri {
+    grid-area: IMGF;
     background-image: url('./Images/dance-couple_640x420.webp');
     background-size: cover;
 }
@@ -164,13 +165,20 @@ li {
 /*****************************************/
 /********************  SAT  **************/
 /*****************************************/
-.cal-sat {
+.cal-sat_DEPR {
     background-color: rgb(230, 188, 72);
     border: 3px red solid;  
 }
 
+
+.grd-img-sat {
+    grid-area: IMGS;
+    background-image: url('./Images/dance-woman-legs-active-600x420.webp');
+    background-size: cover;
+}
+
 .grd-txt-sat {
-    grid-column: 2 / -1 ;
+    grid-area: SAT;
     background-color: rgb(49, 128, 162);
     color: white;
     padding: 22px 48px;
@@ -182,20 +190,14 @@ li {
     width: 85%;
 }
 
-.grd-img-sat {
-    background-image: url('./Images/dance-woman-legs-active-600x420.webp');
-    background-size: cover;
-}
-
 
 /******************************************/
 /****************  Sun ******************/
 /******************************************/
 .grd-txt-sun {
-    grid-column: 1/3;
+    grid-area: SUN;
     background-color: rgb(100, 144, 70);
     color:  white;
-    padding: 22px 48px;
 }
  
 .grd-txt-sun  li:nth-child(odd) {
@@ -204,42 +206,28 @@ li {
 }
 
 .grd-img-sun {
+    grid-area: IMGN;
     background-image: url('./Images/hot-salsa-full-length-young-600w-1190203360.webp');
     background-size: cover;
 }
 
-
-
-
-@media (max-width: 500px)
+ 
+@media (max-width: 600px)
 {
     .container {
-       /* display:block; */
+       display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows:    1fr;
+        grid-template-rows:    68px  repeat(6, 300px) ;
+
+        grid-template-areas:
+            " HAED  "
+            " FRI   "   
+            " IMGF  "
+            " SAT   "
+            " IMGS  "
+            " SUN   "
+            " IMGN  ";
     }
-
-    .grd-txt-fri {
-    grid-template-columns: 1fr;
-    background-color: rgb(100, 144, 70);
-    color:  white;
-    padding: 22px 48px;
-}
-    
-.grd-img-fri {
-    background-image: url('./Images/dance-couple_640x420.webp');
-    background-size: cover;
-    grid-template-columns: 1fr;
-}
-
-   
-.grd-img-sat {
-    background-image: url('./Images/dance-woman-legs-active-600x420.webp');
-    background-size: cover;
-    grid-template-columns: 1fr;
-}
-
-     
 }
 
 </style>
@@ -309,7 +297,7 @@ li {
 
 
 
-    <div  class="grd-txt-fri"; style="background-color: coral" >
+    <div  class="grd-txt-sun"; style="background-color: coral" >
         <a name="sun"> </a>
         <h1> Sunday</h1>
         
