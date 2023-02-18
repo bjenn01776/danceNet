@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("0aJsrazqAuBf5_Khr");
+        })();
+    </script>
+
+
+
+    <style> 
+
+*, *::after, *::before{ padding: 0; margin: 0; box-sizing: border-box;}
+
+    
+
+    body {
+            background-image:url('Images/resolving.jpg') ;
+    }
+
+    .container {
+        width: 65%;
+        background-color: aliceblue;
+        outline: blue 2px solid;
+    }
+
+    .formFactor {
+        width: 460px;
+        border: 8px black solid;
+        background-color: gray;
+        margin: 2em auto 0 auto;
+        border-radius: 16px;
+    }
+
+    .formDiv { width:85%;}
+
+    label,h2 {
+        display: block;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin:   1em  1em 0 1em;
+    }
+
+input,textarea  {
+    display: block;
+    width: 85%;
+    margin:  .2em  auto  ;
+    padding: .4em .4em  .4em .4em ;
+    font-size: 1.8em;
+    border-radius: 6px ;
+    }
+
+button {
+    display:block;
+    width: 85%;
+    margin: 1em auto;
+    height: 2.8em;
+    font-size: 1.8em;
+    font-weight: 700;
+    background-color: burlywood;
+    border-radius: 6px;
+    }
+
+button[type='submit']:hover {
+        background-color: aquamarine;
+    }
+    
+    </style>
+</head>
+<body>
+
+   
+     
+    <form   class="formFactor"  method="Post">
+        
+
+        <div style="margin-top: 1.2em";></div>
+
+        
+        <label for="name"> Name: </label>
+        <input type="text" name="name" id="name" required>
+        
+
+           
+        <label for="phone" >Phone: </label>
+        <input type="tel" name="phone" id="phone" required> 
+        
+     
+        <label for="mail"> Email: </label>
+        <input type="email"  name="mail" id="mail" required>
+        
+        <h2> Message:</h2>
+        <textarea cols="48" rows="6" name="msg" id="myMsg"></textarea>
+
+        <button type="submit" id="btn"  onclick="sendEmail()">  SUBMIT  </button> 
+    </form>
+
+   
+    <script>  
+    function sendEmail()
+    {
+        console.log("Begin sendEmail(): Sending msg  to epien1");
+
+        var template_ID = 'template_f4g1er3';
+        var  service_ID = 'service_9dx2u3i';
+        
+        var templateParams = {
+            name:  document.getElementById("name").value,
+            mail:  document.getElementById("mail").value,
+            phone: document.getElementById("phone").value
+        };
+
+        emailjs.send(service_ID, template_ID, templateParams)
+            .then(  (res)=>{ alert("bj email succes"); })  
+            .catch( (err)=>alert("bj email fail") );  
+ 
+        //emailjs.send(service_ID, template_ID, templateParams)
+       //     .then(function(response) {
+       //     console.log('SUCCESS!', response.status, response.text);
+      //  }, function(error) {
+       // console.log('FAILED...', error);
+      //  });
+
+      alert( " exiting send emailjs!!!");
+
+    } 
+    </script>
+
+    
+</body>
+</html>
