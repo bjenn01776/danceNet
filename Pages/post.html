@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/header.css">
+    <script type="text/javascript" src="../JScript/hamburger.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script>
+        function init() {
+            console.log("init called");
+            emailjs.init("0aJsrazqAuBf5_Khr");
+        }
+    </script>
+ 
+    <style> 
+
+    *, *::after, *::before{ padding: 0; margin: 0; box-sizing: border-box;}
+
+
+    body {
+        /* background-image:url('../Images/danceLegs.webp') ; */
+            background-image:url('../Images/dance-ballerSlippers.jpg') ;
+            background-size:contain;
+    }
+
+    .container {
+        width: 65%;
+        background-color: aliceblue;
+        outline: blue 2px solid;
+    }
+
+    .formFactor {
+        width: 460px;
+        border: 8px black solid;
+        background-color: gray;
+        margin: 2em auto 0 auto;
+        border-radius: 16px;
+    }
+
+    .formDiv { width:85%;}
+
+    label,h2 {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin:   1em  1em 0 1em;
+    }
+
+    input,textarea  {
+    display: block;
+    width: 85%;
+    margin:  .2em  auto  ;
+    padding: .3em .3em  .3em .3em ;
+    font-size: 1.2em;
+    border-radius: 6px ;
+    }
+
+    button {
+    display:   block;
+    width:     85%;
+    margin:    1em auto;
+    height:    2.8em;
+    font-size: 1.8em;
+    font-weight: 700;
+    background-color: burlywood;
+    border-radius: 6px;
+    }
+
+    button[type='submit']:hover {
+        background-color: aquamarine;
+    }
+</style>
+
+
+</head>
+<body>
+
+     <div class="hero">
+        <div class="logo"></div>
+        <div class="hdr_box">DANCEBOOK</div>
+
+        <div class="hamburger" id="hamb">
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+            <div class="ham_line"></div>
+        </div>
+    </div>
+
+
+    <nav class="navbar">
+        <div class="nav_menu">
+            <a href="../index.html">Home</a>
+            <a href="../Pages/weekend.html">Dances</a>
+            <a href="../Pages/cal.html">Calender </a>
+            <a href="../Pages/Events.html">Holiday</a>
+            <!-- <a href="../EmailForms/myEmailJS.html">Join</a> -->
+        </div>
+    </nav>
+
+
+    <div class="sidebar">
+        <ul>
+            <li>  <a href="../index.html">Home</a></li>
+            <li>  <a href="../Pages/SchedWk1.html">Dances </a> </li>
+            <li>  <a href="../Pages/cal.html">Calender </a> </li>
+            <li>  <a href="../Pages/Events.html">Holiday </a> </li>
+            <li>  <a href="../EmailForms/post.html">Post </a> </li>
+        </ul>
+    </div>
+
+     
+    <form   id="myForm"  class="formFactor"  method="Post"  >
+
+        <div style="margin-top: 1.2em"></div>
+
+        <label for="venue"> Venue: </label>
+        <input type="text" name="venue" id="venue" placeholder="Dance place"  value="Kadance" required>
+
+        <label for="date"> Date: </label>
+        <input type="date"  name="date" id="date" required>
+
+       <label for="time"> Time: </label>
+        <input type="time"  name="time" id="time" required>
+      
+        <label for="style" >Style: </label>
+        <input type="text" name="Style" id="style" value="Ballroom" > 
+        
+        <label for="loc" >Location: </label>
+        <input type="text" name="Location" id="loc" required value="Woburn"> 
+
+        <label for="email" >Email: </label>
+        <input type="email" name="email" id="email" placeholder="myEmail.com"> 
+
+        <h2> Message:</h2>
+        <textarea cols="48" rows="6" name="message" id="message"></textarea>
+
+        <button type="submit" id="btn" onsubmit="ael()">  SUBMIT  </button> 
+    </form>
+
+
+    
+<script> ael();
+
+    function ael() {
+
+        console.log ("ael called");
+
+        init();
+
+        document.getElementById('myForm')
+        .addEventListener('submit', function(event) {
+            event.preventDefault();
+
+        var stuff = { venue: document.getElementById('venue').value,
+            date:     document.getElementById('date').value,
+            time:     document.getElementById('time').value,
+            style:    document.getElementById('style').value,
+            location: document.getElementById('loc').value,
+            email:    document.getElementById('email').value,
+            message:  document.getElementById('message').value
+        };    
+
+        console.log("Date:: " + stuff.date.toString());
+        console.log("Time:: " + stuff.time.toString());
+
+        // these IDs from the previous stepsS
+        emailjs.sendForm('service_jry1tch', 'template_63zqv3c', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    alert("Message sent successfully!");
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert("Failed to send message. Please try again.");
+                });
+        });
+    }
+
+</script>
+</body>
+</html>

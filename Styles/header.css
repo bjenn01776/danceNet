@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display:   block;
+    width:       90%;
+    margin:     auto;
+    margin-top: 175px;
+    background-color: rgb(81, 176, 200);
+}
+
+
+.hero {
+	position: sticky;
+	top: 0;
+    height: 6vh;
+    background-color: rgb(175, 209, 144);
+} 
+
+
+.hdr {
+    position: relative;
+    display: flex;
+    height: 6vh;
+    background-color: rgb(175, 209, 144);
+    align-items: center;
+}
+
+.logo {
+    margin-left:   1.2em;
+    height:        3.2em;
+    width:         3.2em;
+    border-radius: 1.8em;
+    background-image: url('../Images/dance-woman-legs-active-600x420.webp');
+    background-size: cover;
+    border: 2px white solid;
+    flex: 1;
+}
+
+.hdr_box {
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif, Geneva, Verdana, sans-serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-weight: bold;
+    /* margin-left: 2.8rem; */
+    margin-top: 1.0vh;
+    flex:6;
+    text-align: center;
+}
+
+  .hamburger {
+        display:  block;
+        width:    40px;
+        height:   40px;
+        background-color:  green;
+       
+        cursor:      pointer;
+        line-height: .4rem;
+       
+        position: absolute;
+        top:   7px;
+        right:  10px; 
+        z-index: 2; 
+        transition-duration: .6s;
+    }
+
+     .hamburger_90 {
+        display:  block;
+        width:    40px;
+        height:   35px;
+        position: absolute;
+        cursor:   pointer;
+        line-height: .4rem;
+        background-color: green;
+        position: absolute;
+        top:    8px;
+        right:  10px;
+        transform: rotate(90deg);
+        transition-duration: .6s;
+    }
+
+    .ham_line {
+        width: 100%;
+        height: 5px;
+        background-color:black;
+        margin-top: 6px ;
+    }
+
+    /* .hamburger[nth-last-child]
+    {margin-bottom: 16px;} */
+
+    .sidebar {
+        /* width: 15%; */
+        color: white;
+        background-color: rgb(111, 142, 226);
+        position: fixed;
+        top: 145px;
+        left: 110%;
+        transition: 'all 0.8s ease'; 
+        display: none;
+        padding: 1.2em;
+        border: 3px white solid;
+        transition-duration: .8s;
+    }
+
+    .sidebar ul li{
+        list-style-type: none;
+        padding: 0;
+        margin: 12px 0;
+        font-size: 1.4em;
+    }
+
+    .sidebar ul li a{
+        list-style-type: none;
+        text-decoration: none;
+    }
+      
+    a:hover {
+        color: yellow;
+        background-color: darkblue;
+    }
+
+     
+
+
+.navbar {
+    display: none;
+    height: 6vh;
+    background-color: rgb(87, 84, 84);
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    position: relative;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav_menu {
+    float: right;
+    margin-right: 24px;
+    margin-top: 1.2vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+
+    font: 1.4em white arial;
+}
+
+ @media(min-width: 600px)
+         {
+            .navbar {
+                display:block;
+            }
+            .hamburger{
+                 display:none; 
+            }
+        }
+
+.selector {
+    display: flex;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: steelblue;
+    width: auto;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+}
+
+.btnP {
+    height: 5vh;
+    width: 8em;
+    background-color: darkgrey;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+.btnN {
+    height: 5vh;
+    width: 8em;
+    background-color: darkgrey;
+    font-size: 1.0em;
+    font-weight: bold;
+}

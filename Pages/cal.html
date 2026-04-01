@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <title>Calender</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Styles/header.css">
+    <script type="text/javascript" src="../JScript/calender.js"></script>
+    <script type="text/javascript" src="../JScript/hamburger.js"></script>
+
+
+    <style>
+        body {
+            background-color: rgb(211, 211, 203);
+           
+        }
+
+        .container {
+            width: 85%;
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .header {
+            display: flex;
+        }
+
+        .month {
+            flex: 7;
+            background-color: lightblue;
+            border: 2px black solid;
+            width:  90%;
+            margin: auto;
+            height: 10vh;
+            max-width: 760px;
+        }
+
+        .month h1 {
+            text-align: center;
+            margin-top: 16px;
+            padding-top: 12px;
+        }
+
+        .container_wkdy {
+            display: flex;
+            
+            /* flex-wrap: nowrap; */
+        }
+
+        .wkdy {
+            flex: 1;
+            border: 2px solid black;
+            text-align: center;
+            font-weight: bold;
+            /* flex-wrap: nowrap;
+            min-width:max-content;
+            flex-shrink: 1; */
+        }
+
+        #cal {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows:    repeat(5, 64px);
+            grid-gap: 3px;
+            width: 100%;
+            margin: auto;
+            background-color: black;
+        }
+
+        .btn {
+            flex: 1;
+            background-color: black;
+            color: white;
+            border: yellow 3px solid;
+            align-items:flex-center;
+            justify-content: center;
+            min-width: 4em;
+        }
+        .btn h1,p {text-align: center;
+            font-size: 2.4em;
+            font-weight: bolder;
+            margin:auto;
+            padding-top: .6em;}
+
+        .boxND {
+            background-color: gray;
+        }
+
+        .box {
+            background-color: lightgreen;
+            text-align: center;
+            align-content: center;
+            /* box-shadow: 3px 3px gray; */
+
+            .xday {
+                background-color: cadetblue;
+                background-color: black;
+            }
+
+            .xday1 {
+                /* background-color: cadetblue; */
+                background-color: black;
+                grid-column: 3/3;
+            }
+
+            /* @media(max-width: 500px)
+            {
+                div.class.wk.content = "SUN";
+            } */
+
+        }
+        .nav_menu a {
+            font-size: .9em;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="hdr">
+            <div class="logo"></div>
+            <div class="hdr_box">DANCEBOOK</div>
+
+            <div class="hamburger">  
+          <div class="ham_line"></div>
+          <div class="ham_line"></div>
+          <div class="ham_line"></div>
+            </div>
+            
+        </div>
+        <nav class="navbar">
+            <div class="nav_menu">
+                <a href="../index.html">Home</a>
+                <a href="../Pages/SchedWk1.html">Dances</a>
+                <a href="../Pages/cal.html">Calendar </a>
+                <a href="../Pages/Events.html">Holiday</a>
+                <a href="../Pages/post.html">Post</a> 
+            </div>
+        </nav>
+
+
+        <div class="header">
+             <div class="btn" id="bup">
+                 <h1><</h1> 
+                <span class="fa fa-arrow-right"></span>
+            </div>
+
+            <div class="month">
+                <h1 id="mname"> September</h1>
+            </div>
+           
+            <div class="btn" id="bdwn">
+                <p>></p>
+            </div>
+        </div>
+        
+        <div class="container_wkdy">
+            <div class="wkdy">Sun</div>
+            <div class="wkdy">Mon</div>
+            <div class="wkdy">Tue</div>
+            <div class="wkdy">Wed</div>
+            <div class="wkdy">Thu</div>
+            <div class="wkdy">Fri</div>
+            <div class="wkdy">Sat</div>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li>  <a href="../index.html">Home    </a></li>
+                <li>  <a href="../Pages/SchedWk1.html">Dances </a> </li>
+                <li>  <a href="../Pages/cal.html">Calendar </a> </li>
+                <li>  <a href="../Pages/Events.html">Holiday </a> </li>
+                <li>  <a href="../Pages/EmailForms/post.html">Post </a> </li>
+            </ul>
+        </div>
+
+        <div id="cal">        </div>
+    </div>
+
+    <script> calender() </script>
+
+</body>
+
+</html>
